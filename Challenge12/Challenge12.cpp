@@ -8,15 +8,19 @@
 
 int main()
 {
+
     const shared_ptr<TextSystem> textSystem = make_shared<TextSystem>();
 
-    string str = "ANA lleVa al ôsö la avellana";
+    //string str = "ANA lleVa al ôsö la avellana";
+    string str1;
 
-    cout << str << endl;
+    cout << "Escriba su palindromo: ";
+    getline(cin >> ws,str1);
+    //cout << str << endl;
 
-    textSystem->FormatString(str);
+    textSystem->FormatString(str1);
     
-    if (textSystem->IsPalindrome(str))
+    if (textSystem->IsPalindrome(str1))
     {
         std::cout << "Is a palindrome!\n";
     }
