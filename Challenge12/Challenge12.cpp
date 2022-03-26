@@ -8,7 +8,7 @@
 
 int main()
 {
-    shared_ptr<TextSystem> textSystem = make_shared<TextSystem>();
+    const shared_ptr<TextSystem> textSystem = make_shared<TextSystem>();
 
     string str = "Anîta lavâ lä tínA";
 
