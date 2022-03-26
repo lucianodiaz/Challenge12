@@ -10,13 +10,13 @@ int main()
 {
     shared_ptr<TextSystem> textSystem = make_shared<TextSystem>();
 
-    string str = "Anîta lavâ lä tína";
+    string str = "Anîta lavâ lä tínA";
 
     cout << str << endl;
 
     textSystem->FormatString(str);
     
-    if (textSystem->CheckIsPalindrome(str))
+    if (textSystem->IsPalindrome(str))
     {
         std::cout << "Is a palindrome!\n";
     }

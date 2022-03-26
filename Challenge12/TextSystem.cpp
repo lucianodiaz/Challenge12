@@ -42,7 +42,7 @@ void TextSystem::RemoveAccentMark(string& str)
     }
 }
 
-const bool TextSystem::CheckIsPalindrome(const string& str)
+const bool TextSystem::IsPalindrome(const string& str)
 {
     size_t begin = 0;
     size_t end = str.length()-1;

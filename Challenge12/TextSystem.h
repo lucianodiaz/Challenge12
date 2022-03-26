@@ -20,7 +20,7 @@ public:
 	};
 	void FormatString(string& str);
 
-	const bool CheckIsPalindrome(const string& str);
+	const bool IsPalindrome(const string& str);
 private:
 	void RemoveAccentMark(string& str);
 
