@@ -1,5 +1,5 @@
 #include "TextSystem.h"
-#include <map>
+
 
 TextSystem::TextSystem()
 {
@@ -25,20 +25,14 @@ void TextSystem::LowerCaseString(string& str)
 	});
 }
 
+
+
 void TextSystem::RemoveAccentMark(string& str)
 {
-    map<char, char> mapCharacter;
-
-    mapCharacter.insert(pair<char, char>('á', 'a'));
-    mapCharacter.insert(pair<char, char>('é', 'e'));
-    mapCharacter.insert(pair<char, char>('í', 'i'));
-    mapCharacter.insert(pair<char, char>('ó', 'o'));
-    mapCharacter.insert(pair<char, char>('ú', 'u'));
-
     for (size_t i = 0; i < str.length(); i++)
     {
-        map<char, char>::iterator it;
-        for (it = mapCharacter.begin(); it != mapCharacter.end(); it++)
+        map<char, char>::const_iterator it;
+        for (it = m_dictionaryAccents.begin(); it != m_dictionaryAccents.end(); it++)
         {
             if (str[i] == it->first)
             {
@@ -50,9 +44,9 @@ void TextSystem::RemoveAccentMark(string& str)
 
 const bool TextSystem::CheckIsPalindrome(const string& str)
 {
-    unsigned int begin = 0;
-    unsigned int end = str.length()-1;
-    const unsigned int pivot = end / 2;
+    size_t begin = 0;
+    size_t end = str.length()-1;
+    const size_t pivot = end / 2;
 
     while (begin < pivot && end > pivot)
     {
