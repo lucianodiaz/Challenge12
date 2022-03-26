@@ -10,7 +10,7 @@ int main()
 {
     const shared_ptr<TextSystem> textSystem = make_shared<TextSystem>();
 
-    string str = "Anîta lavâ lä tínA";
+    string str = "ANA lleVa al ôsö la avellana";
 
     cout << str << endl;
 
